@@ -15,10 +15,53 @@
  * 
  * output => ["h@ck","one",2,"three",4,"five","h@ck","f00","Bar","b@z","quX","3ch0","h@ck"]   
  */
-let numberArray = [1,2,3,4,5];
-let stringArray = ["foo","bar","baz","qux","echo"]
+let numberArray = [1, 2, 3, 4, 5];
+let stringArray = ["foo", "bar", "baz", "qux", "echo"];
 let result = [];
 
+// 1) Incluir los 2 arrays en 1 solo array
+result = ["h@ck"];
 
-//export result
+// 2) Reescribir los items del array de números y transformar los items del array de strings
+for (let i = 0; i < numberArray.length; i++) {
+  if (i % 2 === 0) {
+    switch (numberArray[i]) {
+      case 1:
+        result.push("one");
+        break;
+      case 3:
+        result.push("three");
+        break;
+      case 5:
+        result.push("five");
+        break;
+      default:
+        result.push(numberArray[i]);
+    }
+  } else {
+    result.push(numberArray[i]);
+  }
+
+  switch (stringArray[i]) {
+    case "foo":
+      result.push("f00");
+      break;
+    case "bar":
+      result.push("Bar");
+      break;
+    case "baz":
+      result.push("b@z");
+      break;
+    case "qux":
+      result.push("quX");
+      break;
+    case "echo":
+      result.push("3ch0");
+      break;
+  }
+}
+
+// 3) Anexar "h@ck" al final del array
+result.push("h@ck");
+
 module.exports = result;

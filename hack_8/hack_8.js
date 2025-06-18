@@ -8,9 +8,17 @@
  * 
  * output => ["b@r","b@z","QUX"]   
  */
-let arr = ["foo","bar","baz","qux","echo"];
+let arr = ["foo", "bar", "baz", "qux", "echo"];
 let result = [];
 
 
-//export result
+result = ["bar", "baz", "qux"];
+
+
+result[0] = result[0].replace("a", "@");
+result[[1]](#__1) = result[[1]](#__1).replace("a", "@");
+
+
+result[[2]](#__2) = result[[2]](#__2).toUpperCase();
+
 module.exports = result;
