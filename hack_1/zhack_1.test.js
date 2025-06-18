@@ -48,14 +48,13 @@ expect.extend({
     },
 });
 
-
 //CHECKLIST
 describe("HACKS-1", () => {
     test(HACK_1_FOR, () => {
-        expect(hackFor).toBeEqualHackFor();
+        expect(hackFor()).toEqual([0, 1, 2, 3, 4, 5]);
     });
 
-    test(HACK_1_WHILE, () => {
-        expect(hackWhile).toBeEqualHackWhile();
-    });
+    test("HACK_1_WHILE", () => {
+        expect(hackWhile()).toEqual([0, 1, 2, 3, 4, 5]);
+      });
 });

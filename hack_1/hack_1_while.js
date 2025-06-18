@@ -7,6 +7,19 @@
  */
 let result = [];
 
+function hackWhile() {
+    let resultado = [];
+    let i = 0;
+    while (i <= 5) {
+      resultado.push(i);
+      i++;
+    }
+    return resultado;
+  }
+  
+  module.exports = hackWhile;
+  
+  
 
 //export result
 module.exports = result;
